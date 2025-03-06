@@ -1,26 +1,28 @@
 fn main() {
-    let mut x = 5;
-    println!("The value of x is: {}", x);
-    x = 6;
-    println!("The value of x is: {}", x);
+    let guess: u32 = "42".parse().expect("Not a number!");
+    println!("The value of guess is: {}", guess);
+    // Length	Signed	Unsigned
+    // 8-bit	i8	    u8
+    // 16-bit	i16	    u16
+    // 32-bit	i32	    u32
+    // 64-bit	i64	    u64
+    // arch	    isize	usize
 
-    let x = 5;
-    let x = x + 1;
-    let x = x * 2;
-    println!("The value of x is: {}", x);
+    //   Number literals	Example
+    //           Decimal	98_222
+    //               Hex	0xff
+    //             Octal	0o77
+    //            Binary	0b1111_0000
+    //    Byte (u8 only)	b'A'
 
-    // shadowing
-    let spaces = "    ";
-    let spaces = spaces.len();
-    println!("The value of spaces is: {}", spaces);
+    let x = 2.0; // f64
+    let y: f32 = 3.0; // f32
 
-    // let mut space = "    ";
-    // space = space.len();
-    // 10 |     let mut space = "    ";
-    //    |                     ------ expected due to this value
-    // 11 |     space = space.len();
-    //    |             ^^^^^^^^^^^ expected `&str`, found `usize`
-    // let, mut 차이
-    // let: 변수를 선언할 때 값을 바꿀 수 없음, shadowing을 통해 새로운 타입, 새로운 값 할당 가능
-    // mut: 변수를 선언할 때 값을 바꿀 수 있음, 타입 고정(변경 불가능)
+    let tup: (i32, f64, u8) = (500, 6.4, 1);
+    let (a, b, c) = tup;
+    println!("The value of b is: {}", b);
+
+    let five_hundred = tup.0;
+    let six_point_four = tup.1;
+    let one = tup.2;
 }
