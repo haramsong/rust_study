@@ -1,0 +1,6 @@
+{
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer", // rust-analyzer 포맷터 사용
+    "editor.formatOnSave": true // 저장할 때 자동 포맷
+  }
+}
